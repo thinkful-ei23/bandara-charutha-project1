@@ -6,4 +6,4 @@ function whoAmI(name, age) {
   console.log("I was born in " + yearOfBirth);
 }
 
-console.log(whoAmI("charutha", 22));
+whoAmI('Charutha', 22);
