@@ -8,8 +8,12 @@ function yearOfBirth(age) {
 }
  
 function whoAmI(name, age) {
-  console.log("Hi, my name is " + name + " and I'm " + age + " years old");
-  let yob = yearOfBirth(age); // #5 no error
+  if (typeof name !== 'string' || typeof age !== 'number') {
+    console.error('Aruments not valid');
+  } else {
+    console.log("Hi, my name is " + name + " and I'm " + age + " years old");
+    let yob = yearOfBirth(age); // #5 no error
+  }
 }
 whoAmI('Charutha', 22);
 
