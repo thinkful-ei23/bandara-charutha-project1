@@ -33,15 +33,26 @@ const studentData = [
     },
   ];
 
-function enrollInSUmmerSchool(students){
+function enrollInSUmmerSchool(students) {
     results = []
-  for (let i =0; i<students.length; i++){
-    results.push({
+    for (let i =0; i<students.length; i++){
+        results.push({
         name: students[i].name,
         status: 'in Summer School',
         course: students[i].course
-  })
+  });
 }
-  return results
+  return results;
 }
-console.log(enrollInSUmmerSchool(studentData))
+console.log(enrollInSUmmerSchool(studentData));
+
+function findById(items, idNum) {
+    for(let i=0; i<items.length; i++) {
+        if (items[i].id === idNum) {
+            return items[i];
+        }
+    }
+}
+
+const data = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
+console.log(findById(data, 2)) // should return {id: 2, foo: 'bizz'}
