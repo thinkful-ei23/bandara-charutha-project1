@@ -34,6 +34,14 @@ const studentData = [
   ];
 
 function enrollInSUmmerSchool(students){
-    const enrolled = Object.assign({}, students);
-    return enrolled
+    results = []
+  for (let i =0; i<students.length; i++){
+    results.push({
+        name: students[i].name,
+        status: 'in Summer School',
+        course: students[i].course
+  })
 }
+  return results
+}
+console.log(enrollInSUmmerSchool(studentData))
