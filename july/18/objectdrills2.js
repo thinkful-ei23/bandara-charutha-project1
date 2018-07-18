@@ -15,6 +15,23 @@ const testData = [
 
 console.log(makeStudentReport(testData));
 
+const studentData = [
+    {
+      name: 'Tim',
+      status: 'Current student',
+      course: 'Biology',
+    },
+    {
+      name: 'Sue',
+      status: 'Withdrawn',
+      course: 'Mathematics',
+    },
+    {
+      name: 'Liz',
+      status: 'On leave',
+      course: 'Computer science',
+    },
+  ];
 
 function enrollInSUmmerSchool(students){
     const enrolled = Object.assign({}, students);
