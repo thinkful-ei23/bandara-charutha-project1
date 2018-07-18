@@ -77,18 +77,22 @@ const cipher = {
 
 let message = 'craft block argon meter bells brown croon droop';
 
-// function decode(sentence) {
-//     const newArray = sentence.split(" ");
-//     const decodedLetters = newArray.map( function(word) {
-//         if ()
-//     })
-// }
-
-function sentenceToWord(sentence) {
-	
-	let newMessage = [];
-	for (let word in sentence) {
-        const value = sentence[word];
-    } 
-	return console.log(newMessage.join(""));
+function decode(sentence) {
+    const newArray = sentence.split(" ");
+    const decodedLetters = newArray.map( function(word) {
+        let firstLetter = word[0];
+        let letterValue = cipher[firstLetter];
+        if (letterValue === undefined) {
+            return ' '
+        }
+        else {
+            return word[letterValue];
+        }
+    });
+    return decodedLetters.join("");
 }
+
+console.log(decode(message));
+
+
+
