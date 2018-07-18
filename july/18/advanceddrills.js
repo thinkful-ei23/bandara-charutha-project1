@@ -39,18 +39,30 @@ console.log(object2.meals[3])
 const arrOfObj = [
     {
         name: 'Woody',
-        jobTitle: 'Cowboy'
+        jobTitle: 'Cowboy',
+        boss: 'Mr. Potato head'
     },
     {
         name: 'Buzz Aldrin',
-        jobTitle: 'Astronaut'
+        jobTitle: 'Astronaut',
+        boss: 'Mr. Potato head'
     },
     {
-        name: 'Mr. Potato Head',
-        jobTitle: 'Potato'
+        name: 'Mr. Potato head',
+        jobTitle: 'Potato',
+        boss: 'Mr. Potato head'
     }  
 ];
 
-arrOfObj.forEach(function(person) {
-    console.log(person);
-});
+//arrOfObj.forEach(function(person) {
+//  console.log(person);
+//});
+
+arrOfObj.forEach(function(person){
+if(person.boss != person.name){
+    console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`)
+}
+else {
+console.log(`${person.jobTitle} ${person.name} doesn't report to anybody` )
+}
+})
