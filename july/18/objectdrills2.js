@@ -14,3 +14,9 @@ const testData = [
   ];
 
 console.log(makeStudentReport(testData));
+
+
+function enrollInSUmmerSchool(students){
+    const enrolled = Object.assign({}, students);
+    return enrolled
+}
