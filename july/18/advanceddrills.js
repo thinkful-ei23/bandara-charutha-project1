@@ -33,3 +33,24 @@ const object2 = {
 }
 
 console.log(object2.meals[3])
+
+// 4
+
+const arrOfObj = [
+    {
+        name: 'Woody',
+        jobTitle: 'Cowboy'
+    },
+    {
+        name: 'Buzz Aldrin',
+        jobTitle: 'Astronaut'
+    },
+    {
+        name: 'Mr. Potato Head',
+        jobTitle: 'Potato'
+    }  
+];
+
+arrOfObj.forEach(function(person) {
+    console.log(person);
+});
