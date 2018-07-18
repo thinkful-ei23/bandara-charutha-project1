@@ -26,4 +26,10 @@ function loopObject1(data) {
 }
 
 loopObject1(object1) 
-// console.log(Object.keys(Object1));
+
+
+const object2 = {
+    meals: [ 'breakfast','second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+
+console.log(object2.meals[3])
