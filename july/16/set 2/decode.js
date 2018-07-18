@@ -12,8 +12,7 @@ function decode(word) {
 	else if (firstChar === 'd') {
 		return word[4];
 	}
-	else {return ' '};
-	
+	else {return ' '};	
 }
 
 let message = 'craft block argon meter bells brown croon droop';
