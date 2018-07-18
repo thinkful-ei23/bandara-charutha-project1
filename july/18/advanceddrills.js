@@ -66,3 +66,29 @@ else {
 console.log(`${person.jobTitle} ${person.name} doesn't report to anybody` )
 }
 })
+
+//6 
+const cipher = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+}
+
+let message = 'craft block argon meter bells brown croon droop';
+
+// function decode(sentence) {
+//     const newArray = sentence.split(" ");
+//     const decodedLetters = newArray.map( function(word) {
+//         if ()
+//     })
+// }
+
+function sentenceToWord(sentence) {
+	
+	let newMessage = [];
+	for (let word in sentence) {
+        const value = sentence[word];
+    } 
+	return console.log(newMessage.join(""));
+}
