@@ -101,7 +101,7 @@ function createCharacter(name,nickname, race, origin, attack, defense, weapon){
 return {
     name, nickname, race, origin, attack, defense, weapon,
     describe(){
-        console.log(`${this.name} is a ${this.race} from ${this.origin} who uses a ${weapon}`)
+        console.log(`${name} is a ${race} from ${origin} who uses a ${weapon}`)
     },
     evauateFight (character){
         let dealDamage = this.attack - character.defense
@@ -129,7 +129,10 @@ const character = [
 
 character.push(createCharacter('arwen undomiel','arwen', 'half-elf','rivendell',75,2,'hadhafang'))
 
-character.find(person => person.nickname === 'aragorn').describe
+const aragorn =character.find(person => person.nickname === 'aragorn')
+const bilbo = character.find(person => person.nickname === 'bilbo')
+
+console.log(aragorn.evauateFight(bilbo))
 
 const hobbitArray = character.filter(person => person.race === 'hobbit')
 console.log(hobbitArray)
