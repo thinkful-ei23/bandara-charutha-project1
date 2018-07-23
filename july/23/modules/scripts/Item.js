@@ -1,3 +1,3 @@
-const items = (function () {
-
+const Item = (function () {
+    return {};
 } () )

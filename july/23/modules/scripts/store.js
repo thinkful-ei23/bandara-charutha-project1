@@ -1,27 +1,17 @@
 /* global shoppingList, cuid, $ */
 // eslint-disable-next-line no-unused-vars
 
-const STORE = {
-    items: [
+const store = (function () {
+
+    let items = [
         { id: cuid(), name: 'apples', checked: false },
         { id: cuid(), name: 'oranges', checked: false },
         { id: cuid(), name: 'milk', checked: true },
         { id: cuid(), name: 'bread', checked: false }
-      ],
-      hideCheckedItems: false,
-      searchTerm: ''
-    }
+      ];
+    let hideCheckedItems = false;
+    let searchTerm = '';
 
-const store = (function () {
-
-    // const foo = 'bar';
-
-    let items = STORE.items;
-    let hideCheckedItems = STORE.hideCheckedItems;
-    let searchTerm = STORE.searchTerm;
-
-    return items;
-    return hideCheckedItems;
-    return searchTerm;
+    return {items, hideCheckedItems, searchTerm};
 }() );
 
