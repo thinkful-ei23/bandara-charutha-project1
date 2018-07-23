@@ -1,4 +1,4 @@
-/* global shoppingList, cuid, $, Items */
+/* global shoppingList, cuid, $, Item */
 // eslint-disable-next-line no-unused-vars
 
 const store = (function () {
@@ -18,9 +18,8 @@ const store = (function () {
 
 	const addItem = function(name) {
 		try {
-			Items.validateName(name);
-			Items.create(name);
-			this.items(items.create(name))
+			Item.validateName(name);
+			this.items.push(Item.create(name));
 		} catch(error) {
 			console.log('Cannot add items:' + error.message);
 		}
@@ -29,8 +28,22 @@ const store = (function () {
 	const findAndToggleChecked = function(id) {
 		const foundItem = this.findById(id);
 		foundItem.checked = !foundItem.checked;
-
 	};
 
-	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndToggleChecked};
+	const findAndUpdateName = function(id, newName) {
+		try {
+			Item.validateName(newName);
+			this.findById(id);
+			store.item.name = newName;
+		} catch(error) {
+			console.log('Cannot update name: ' + error.message);
+		}
+	};
+
+	const findAndDelete = function(id) {
+		let foundItem = this.findById(id);
+		store.items = store.items.filter(item => item !== foundItem);
+	};
+
+	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndToggleChecked, findAndUpdateName, findAndDelete};
 }() );
