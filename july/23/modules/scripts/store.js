@@ -45,5 +45,13 @@ const store = (function () {
 		store.items = store.items.filter(item => item !== foundItem);
 	};
 
-	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndToggleChecked, findAndUpdateName, findAndDelete};
+	const toggleCheckedFilter = function(id) {
+		this.hideCheckedItems = !this.hideCheckedItems;
+	}
+
+	const setSearchTerm = function(val) {
+		this.searchTerm = val;
+	}
+
+	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndToggleChecked, findAndUpdateName, findAndDelete, toggleCheckedFilter, setSearchTerm};
 }() );
