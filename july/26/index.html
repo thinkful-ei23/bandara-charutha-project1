@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bookmark App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <main class="main" role="main">
+        <header class="header" role="banner">
+            <h1>My Bookmarks</h1>
+        </header>
+        <button class = "js-add-button add-button" type="button">Add</button>
+        <select class = "js-rating rating" aria-label="Star Rating">
+            <option value = "0">"Minimum</option>
+            <option value = "1">"5 Stars</option>
+            <option value = "2">"4 Stars</option>
+            <option value = "3">"3 Stars</option>
+            <option value = "4">"2 Stars</option>
+            <option value = "5">"Show All</option>
+        </select>
+        <div class="error" aria-live="assertive" hidden="true"></div>
+        <section class="js-add-new-container js-input-hidden input-container" aria-live="assertive" hidden='true'>
+        </section>
+        <section class="bookmark-container">
+            <ul class='js-bookmark-list bookmark-list' aria-live="assertive" hidden="false">
+                 <!-- Insert Javascript Here -->
+            </ul>
+        </section>
+    </main>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="item.js"></script>
+  <script type="text/javascript" src="store.js"></script>
+  <script type="text/javascript" src="api.js"></script>
+  <script type="text/javascript" src="bookmarkList.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
